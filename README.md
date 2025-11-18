@@ -25,35 +25,34 @@ This repository includes **two versions** of the project:
 ---
 
 ## 📁 Repository Structure
-.
+
+📦 root
+
+├── 🧠 main.cpp
+
+├── 🏎️ race.cpp
+
+├── 🏎️ race.h
+
+├── 👁️ sensors.cpp
+
+├── 👁️ sensors.h
+
+├── ⚙️ motors.cpp
+
+├── ⚙️ motors.h
+
+├── 📐 pid.cpp
+
+├── 📐 pid.h
+
+├── 🗂️ utils.h
 
 │
 
-├── main.cpp # Setup + main loop
+└── 📁 Yeti_v4
 
-├── race.cpp # Race logic (PID + steering)
-
-├── race.h
-
-├── sensors.cpp # Sensor reading + calibration
-
-├── sensors.h
-
-├── motors.cpp # Motor driver
-
-├── motors.h
-
-├── pid.cpp # PID controller
-
-├── pid.h
-
-├── utils.h # Constants, pins, macros, globals
-
-│
-
-└── Yeti_v4/
-
-└── Yeti_v4.ino # Fully commented single-file version
+└── 📄 Yeti_v4.ino (single-file version)
 
 ---
 
