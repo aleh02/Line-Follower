@@ -1,36 +1,46 @@
 # Yeti v4 – Line Follower Robot (Arduino)
 
-Yeti v4 is a **high-performance line follower robot** based on Arduino.  
-It uses a 5-sensor infrared array, PID correction and dual-motor control to follow a black or white line at high speed.
+Yeti v4 is a high-performance **line follower robot** based on Arduino.  
+It uses a 5-sensor infrared array, PID correction and dual-motor control to follow a line smoothly and at high speed.
 
-This version (`Yeti_v4`) contains a **single-file, fully commented** and easy-to-run codebase, ideal for learning, competitions or portfolio projects.
+This repository includes **two versions** of the project:
+
+- **Modular version** → clean, professional C++ structure (multiple .cpp/.h files)
+- **Single-file version (`Yeti_v4/`)** → easy to upload and run
 
 ---
 
 ## 🚗 Features
 
-- **5 IR sensors** for line detection  
-- **Dynamic calibration** (min/max per sensor)  
-- **PID controller** with P + D gains  
-- **Smooth proportional steering** (dual DC motors)  
-- **Two operating modes**
-  - Calibration (BTN1)
-  - Race / line following (BTN2)
-- **Failsafe detection** when the line is lost  
-- **Blinking LED** for status indication
+- 5-sensor analog IR array  
+- Automatic sensor calibration  
+- PID controller (P + D active)  
+- Smooth motor steering  
+- LED feedback (line detected / lost)  
+- Two buttons:
+  - **BTN1** → Calibration
+  - **BTN2** → Start race  
+- Failsafe direction recovery when the line is lost  
 
 ---
 
-## 📁 Project Structure
+## 📁 Repository Structure
 
-Yeti_v4/
-
+.
 │
-
-└── Yeti_v4.ino ← Single, fully-commented Arduino file
-
-
-Everything runs from one file to keep the project clean and simple.
+├── main.cpp # Setup + main loop
+├── race.cpp # Race logic (PID + steering)
+├── race.h
+├── sensors.cpp # Sensor reading + calibration
+├── sensors.h
+├── motors.cpp # Motor driver
+├── motors.h
+├── pid.cpp # PID controller
+├── pid.h
+├── utils.h # Constants, pins, macros, globals
+│
+└── Yeti_v4/
+└── Yeti_v4.ino # Fully commented single-file version
 
 ---
 
